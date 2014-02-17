@@ -1,22 +1,25 @@
-function FizzBuzz(number) {
-	return 1;
+function FizzBuzz() {
+
 };
 
-function FizzBuzz(number) {
-	return 2;
+FizzBuzz.prototype.isDivisibleByThree = function(number) {
+	return number % 3 == 0;
 };
 
-function FizzBuzz(number) {
-	if(number % 3 == 0);
+FizzBuzz.prototype.isDivisibleByFive = function(number) {
+	return number % 5 == 0;
+};
+FizzBuzz.prototype.isDivisibleByFifteen = function(number) {
+	return number % 15 == 0;
+};
+
+FizzBuzz.prototype.play = function(number) {
+	if(this.isDivisibleByFifteen(number)) {
+		return 'FizzBuzz';
+	} else if(this.isDivisibleByFive(number)) {
+		return 'Buzz';
+	} else if(this.isDivisibleByThree(number)) {
+		return 'Fizz';
+	}
 	return number;
-};
-
-function FizzBuzz(number) {
-	if(number % 5 == 0);
-	return number;
-};
-
-function FizzBuzz(number) {
-	if(number % 15 == 0);
-	return number;
-};
+};	
